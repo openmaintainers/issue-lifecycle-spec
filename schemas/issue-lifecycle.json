@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Issue Lifecycle",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "state": {
+      "type": "string",
+      "enum": [
+        "new",
+        "triaged",
+        "accepted",
+        "in_progress",
+        "blocked",
+        "needs_review",
+        "resolved",
+        "closed",
+        "archived"
+      ]
+    }
+  },
+  "required": ["id", "title", "state"]
+}
